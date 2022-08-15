@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*加载页*/
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 1s;
+}
+.loading .warp p{
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+.loading .warp .line{
+    width: 200px;
+    height: 2px;
+    background: #d2d2d2;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+.loading .warp .line div{
+    width: 0;
+    height: 100%;
+    background: #272727;
+    transition: 1s;
+}
+.events_active{
+    pointer-events: none!important;
+    opacity: 0!important;
+   }
+
+
+.to{
+    display: none;
+}
+
+nav {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#navigation {
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    z-index: 9999;
+}
+
+#navigation .navigation {
+    height: 100%;
+    margin: 0 5%;
+    display: flex;
+    align-content: space-between;
+}
+
+#navigation .navigation .logo {
+    height: 100%;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 8%;
+    background-image: url(../img/logof.png);
+}
+
+#navigation .navigation .navigation-content {
+    flex-grow: 2;
+}
+
+#navigation .navigation .navigation-content .content {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style: none;
+    flex-grow: 1;
+    width: 50%;
+    margin-left: 50%;
+    line-height: 48px;
+}
+
+#navigation .navigation .navigation-content li {
+    flex-grow: 1;
+}
+
+#navigation .navigation .navigation-content li .nae {
+    text-decoration: none;
+    display: block;
+    color: aliceblue;
+}
+
+#banner .establish{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: 40vh;
+}
+#banner .establish h1{
+    font-size: 36px;
+    font-family: Microsoft YaHei;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+}
+#banner .establish h1 .time{
+    display: inline-block;
+}
+#banner .establish .text{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    overflow: hidden;
+    z-index: 1;
+}
+#banner .establish .text #copy{
+    /* cursor: pointer; */
+    transition: 0.5s;
+    font-size: 16px;
+    font-weight: 200;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    
+}
+#banner .establish .text #cut{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    background: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: 0.3s;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+}
+#banner .establish .text #cut:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+
+#banner .pull {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/xialabai.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 95%;
+    left: 48.5%;
+    animation: down 2s infinite ease-in-out;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.5s;
+}
+#banner .pull:hover{
+    background-image: url(../img/xialahui.png);
+    transition: 0.5s;
+}
+@keyframes down{
+    0%{
+        top: 95%;
+    }
+    50%{
+        top: 94%;
+    }
+    100%{
+        top: 95%;
+    }
+}
+main {
+    width: 100%;
+    /* height: 100vh; */
+}
+#main{
+    margin:1% 10%;
+    height: 100%;
+    display: flex;
+    flex-grow: 4;
+}
+/* 左边 */
+#main .themain{
+    margin:0 1%;
+    flex-grow: 2;
+    background: aliceblue;
+    border-radius: 10px;
+}
+#main .themain .classification{
+    margin:2% 5%;
+    /* height: 29vh; */
+    display: flex;
+    justify-content: space-between;
+}
+#main .themain .classification div{
+    width: 280px;
+    height: 280px;
+    background-color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#main .themain .classification div:hover{
+    transition: 0.5s;
+    box-shadow:0px 0px 15px rgba(100, 100, 100, .5) ;
+    transform: scale(1.02);
+}
+#main .themain .classification div .ws{
+    text-align: center;
+    line-height: 280px;
+    font-size: 24px;
+    font-weight: 400;
+}
+/* #main .themain .classification .Photoalbum{
+
+} */
+/* #main .themain .classification .thegame{
+
+} */
+#main .themain .classification .copyp{
+    background-image: url(../img/wea.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#main .themain .knowledge{
+    margin:0% 5%;
+}
+#main .themain .knowledge .sharing{
+    margin:0 0 2%;
+    height: 20vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow:0px 0px 15px rgba(100, 100, 100, .5);
+    transition: 0.5s;
+}
+#main .themain .knowledge .sharing:hover{
+    box-shadow:0px 10px 15px rgba(100, 100, 100, .5);
+    transition: 0.5s;
+}
+#main .themain .knowledge .sharing h4{
+    margin:0 2%;
+    line-height:5vh;
+    font-size: 18px;
+}
+#main .themain .knowledge .sharing p{
+    margin:0 2%;
+    font-size: 18px;
+    text-indent: 2em;
+}
+#main .themain .knowledge .sharing .check{
+    margin:0 2%;
+    position: relative;
+    top: 50px;
+    left: 89%;
+    color: aqua;
+}
+/* 右边 */
+#main .about{
+    margin:0 1%;
+    width: 27%;
+    flex-grow: 0.5;
+}
+#main .about .introduce{
+    height: 40vh;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin:0 0 5%;
+}
+#main .about .introduce .intr{
+    margin:0 5%;
+}
+#main .about .introduce .intr h3{
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+#main .about .introduce .intr .tion{
+    list-style: none;
+    line-height: 40px;
+}
+#main .about .introduce .intr .tion .tions .tionas{
+    margin:7% 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+#main .about .introduce .intr .tion .tions .tionas li{
+    width: 70px;
+    height: 70px;
+    background-color: #444;
+    border-radius: 50px;
+    box-shadow: rgb(255 255 255 / 10%) 0px 1px 0px, rgb(0 0 0 / 70%) 0px 1px 1px inset;
+}
+#main .about .introduce .intr .tion .tions .tionas li input{
+    width: 65%;
+    display: block;
+    margin:18% auto;
+}
+#main .about .introduce .intr .tion .tions .tionas .wx{
+    position: relative;
+}
+#main .about .introduce .intr .tion .tions .tionas .wx a{
+    display: block;
+    overflow: hidden;
+}
+#main .about .introduce .intr .tion .tions .tionas .wx i{
+    display: block;
+    position: absolute;
+    bottom: 140px;
+    right: 0;
+}
+#main .about .introduce .intr .tion .tions .tionas .wx i img{
+    height: 15vh;
+    display: none;
+}
+#main .about .introduce .intr .tion .tions .tionas .wx:hover i img{
+    display: block;
+}
+#main .about .search{
+    height: 10vh;
+    background-color: aliceblue;
+    border-radius: 15px;
+    margin:0 0 5%;
+}
+#main .about .search h3{
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    
+}
+#main .about .search .ssear{
+    margin:0 20% ;
+    height: 30px;
+    border: 1px solid #000;
+    display: flex;
+    border-radius: 10px;
+}
+#main .about .search #sear{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: none;
+}
+#main .about .music{
+    height: 30vh;
+    background-color: aliceblue;
+    background-image: url(../img/suad.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin:0 0 5%;
+    border-radius: 10px;
+    position: relative;
+}
+#main .about .music h3{
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+#main .about .recom{
+    height: 70vh;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin:0 0 5%;
+}
+#main .about .recom h3{
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: 400;
+}
+#main .about .recom .recommended{
+    margin:2% 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#main .about .recom .recommended font{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#main .about .recom .recommended a{
+    text-decoration: none;
+    border: 1px solid #000;
+    display: block;
+    margin:0 2% 4%;
+    padding:1% 1%;
+    background-color: #fff;
+    color: #000;
+}
+footer{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(32, 32, 32);
+}
